@@ -1,8 +1,5 @@
 <?php
 
-namespace app;
-require 'vendor/autoload.php';
-
 require_once('config.php');
 $request = $_SERVER['REQUEST_URI'];
 

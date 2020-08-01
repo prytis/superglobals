@@ -27,6 +27,10 @@ $dir_name = $_POST['name'];
    {
       $select = '6';
    }
+   if (is_file($dir_name))
+   {
+      $select = '7';
+   }
  
    switch ($select){
 
@@ -66,9 +70,12 @@ $dir_name = $_POST['name'];
          echo json_encode($mydir);
       break;
       case '6':
-         echo $myPath;
+         echo getcwd();
+      break;
+      case '7':
+         echo 'it is file not directory';
       break;
       default:
-      echo "NIEKO" . $_SESSION['userName'];
+      echo "NIEKO" . ' ' . $select . ' ' . $dir_name;
       break;
    }
